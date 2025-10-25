@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Captando Vida</title>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+  <header id="navegacion">
+    <div class="header-contenedor">
+        <div class="logo">
+            <a href="index.html#hero"> 
+                <img src="logo.jpg" alt="Captando Vida Logo" class="logo-imagen"> 
+            </a>
+        </div>
+        <button class="menu-hamburguesa" aria-label="Abrir menu de navegación">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+        <nav class="menu-principal">
+          <ul>
+            <li><a href="index.html#hero">Inicio</a></li>
+            <li><a href="index.html#problema">Problema</a></li>
+            <li><a href="index.html#zonas-criticas">Mapa</a></li> 
+            <li><a href="index.html#beneficios">Iniciativas</a></li>
+            <li><a href="index.html#captaciones">Proyectos</a></li> 
+             <li id="nav-preguntas"><a href="preguntas.pdf" target="_blank" title="Abrir las preguntas">Preguntas</a></li> 
+            <li id="nav-lista"><a href="lista.pdf" target="_blank" title="Abrir lista">Lista</a></li> 
+            <li id="nav-guia"><a href="Guía.pdf" target="_blank" title="Abrir la guia ">Guia</a></li> 
+            <li><a href="calculadora.html" class="boton-navegacion active">Calculadora</a></li> 
+          </ul>
+        </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="calculadora" class="seccion-principal">
+      <h1>Estima tu Potencial de Captación de Agua Anual en Zinacantepec</h1>
+       <div class="campo-formulario">
+            <label for="consumo">
+                Calculadora
+                <span class="tooltip-trigger" role="button" tabindex="0">
+                    ? 
+                    <div class="tooltip-info tooltip-alerta">
+                        <div class="tooltip-header">
+                            <i class="icono-alerta" role="img" aria-label="Información">ℹ️</i> 
+                            <div class="tooltip-titulo">Para que sirve</div>
+                        </div>
+                        <div class="tooltip-body">
+                          <p>Con ella puedes estimar tu Potencial de Captación de Agua Anual. Pruebala ahora</p>
+                        </div>
+                    </div>
+                </span>
+            </label>
+        </div>
+      
+      <p>La precipitación anual en Zinacantepec varía entre 165 mm y 785.5 mm. Introduce un valor para descubrir cuánta agua puedes aprovechar.</p>
+
+     
+      <form id="form-calculadora">
+        <label for="area">Área del techo (m²):</label>
+        <input type="number" id="area" name="area" placeholder="Ej. 100.5" step="0.01" required>
+
+        <label for="material">Material del techo:</label>
+        <select id="material" name="material" required>
+          <option value="">Selecciona una opción</option>
+          <option value="lamina">Lámina galvanizada</option>
+          <option value="teja">Teja</option>
+          <option value="concreto">Concreto</option>
+        </select>
+
+        <label for="lluvia">Precipitación anual (mm):</label>
+        <input type="number" id="lluvia" name="lluvia" placeholder="Ej. 785.5" step="0.01" required>
+        <label for="costo-sistema">Costo total del sistema de captación (MXN):</label>
+<input type="number" id="costo-sistema" name="costo-sistema" placeholder="Ej. 15000.00" step="0.01" required>
+
+<label for="ahorro-mensual">Ahorro mensual estimado por agua (MXN):</label>
+<input type="number" id="ahorro-mensual" name="ahorro-mensual" placeholder="Ej. 150.00" step="0.01" required>
+
+    </button>
+
+        <button id="boton-calcular" type="button">
+            <span class="texto-boton">Calcular Potencial</span>
+            
+            <span class="estado-carga">
+                <span class="spinner"></span>
+                Calculando...
+            </span>
+        </button>
+        
+        <div id="calculadora-mensaje-exito" class="mensaje-exito"></div> 
+
+      </form>
+    
+
+    <section id="resultados" style="display:none;">
+    <h2>¡Resultados para tu propiedad!</h2>
+
+    <p><strong>Área de techo:</strong> <span id="res-area"></span> m²</p>
+    <p><strong>Material:</strong> <span id="res-material"></span></p>
+    <p><strong>Precipitación anual:</strong> <span id="res-lluvia"></span> mm</p>
+
+    <h3>Visualización de Impacto</h3>
+    
+    <div id="graficos">
+        <div class="grafico-item">
+            <label>Agua Captada Anual (Ref. 100,000 L)</label>
+            <div class="barra-contenedor">
+                <div id="barra-agua" class="barra-valor" style="width: 0%;"></div>
+            </div>
+            <span id="label-agua" class="barra-label">0 litros</span>
+        </div>
+        
+        <div class="grafico-item">
+            <label>Equivalencia en Duchas Anuales</label>
+            <div class="barra-contenedor">
+                <div id="barra-duchas" class="barra-valor" style="width: 0%;"></div>
+            </div>
+            <span id="label-duchas" class="barra-label">0 duchas</span>
+        </div>
+    </div>
+    <h3>Detalles y Análisis</h3>
+    <p><strong>Agua captable anual:</strong> <span id="res-agua"></span> litros</p>
+    <p><strong>Equivale a:</strong> <span id="res-tinacos"></span></p>
+    <p><strong>Ahorro estimado:</strong> <span id="res-ahorro"></span> pesos anuales</p>
+    <p><strong>Recuperación de la inversión (ROI):</strong> <span id="res-roi"></span> meses</p>
+    <p><strong>Usos posibles:</strong> <span id="res-usos"></span></p>
+    
+
+    <p><em id="res-consejo"></em></p>
+
+    <div class="contenedor-acciones">
+        <button id="boton-compartir" type="button" class="boton-principal-accion">
+            Compartir Resultados 📢
+        </button>
+        
+        <button id="boton-borrar" type="button" class="boton-secundario">
+            Borrar datos e iniciar nuevo cálculo
+        </button>
+    </div>
+</section>
+    </section>
+    
+  </main>
+
+  <footer id="contacto" class="footer-principal">
+    <div class="footer-contenedor">
+            
+            <div class="footer-info">
+                <h3>Zinacantepec Sostenible</h3>
+                <p class="contacto-email">Email: captaciondeagua2025@gmail.com</p>
+                <p class="contacto-telefono">Teléfono: 722-123-4567</p>
+                <p class="contacto-telefono">Teléfono: 722-456-0923</p>
+
+                <form id="form-suscripcion" class="form-suscripcion">
+                    <h4>¿Te gustaria contactarnos? Suscribete</h4>
+                    
+                    <label for="nombre" class="sr-only">Nombre</label>
+                    <input 
+                        type="text" 
+                        id="nombre" 
+                        name="nombre" 
+                        placeholder="Tu Nombre (Obligatorio)" 
+                        required 
+                    >
+
+                    <label for="email" class="sr-only">Correo Electrónico</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Introduce tu correo (Obligatorio)" 
+                        required 
+                        aria-describedby="email-error"
+                    >
+                    <span id="email-error" class="mensaje-error" aria-live="polite"></span> 
+
+                    <label for="telefono" class="sr-only">Número Telefónico</label>
+                    <input 
+                        type="tel" 
+                        id="telefono" 
+                        name="telefono" 
+                        placeholder="Tu Número Telefónico (Opcional)"
+                    >
+                    <span id="telefono-error" class="mensaje-error" aria-live="polite"></span> 
+                    
+                    <label for="mensaje" class="sr-only">Mensaje</label>
+                    <textarea 
+                        id="mensaje" 
+                        name="mensaje" 
+                        placeholder="Déjanos un mensaje (Opcional)" 
+                        rows="3"
+                    ></textarea>
+                    
+                    <button type="submit" class="boton-primario">SUSCRIBIRME</button>
+                </form>
+                </div>
+
+            <nav class="footer-navegacion">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html#hero">Inicio</a></li>
+            <li><a href="index.html#problema">Problema</a></li>
+            <li><a href="index.html#zonas-criticas">Mapa</a></li> 
+            <li><a href="index.html#beneficios">Iniciativas</a></li>
+            <li><a href="index.html#captaciones">Proyectos</a></li> 
+            <li><a href="calculadora.html" class="boton-navegacion active">Calculadora</a></li> 
+            <li> <a href="preguntas frcuentes.pdf" target="_blank"></a></li>
+            <li><a href="lista de provedores locales.pdf" target="_blank"></a></li>
+            <li><a href="Guía de Uso.pdf" target="_blank"></a></li>
+                </ul>
+            </nav>
+            
+            <div class="footer-social footer-navegacion"> 
+                <h4>Síguenos</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/share/17gnbbwrdd/" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/share/1bpag4prov/" target="_blank">Facebook</a></li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <div class="footer-copyright">
+            <p>© 2025 Proyecto de Captacionde agua pluvial. Ariana Teodoro y Erika Gavia</p>
+        </div>
+  </footer>
+
+  <script src="calculadora.js"></script>
+  <script src="menu.js"></script> 
+  <script src="validacion.js"></script>
+</body>
+</html>

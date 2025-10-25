@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captando vida: El agua en Zinacantepec</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header id="navegacion">
+        <div class="header-contenedor">
+            <div class="logo">
+                <a href="index.html#hero">
+                    <img src="logo.jpg" alt="Captando Vida Logo" class="logo-imagen"> 
+                </a>
+            </div>
+            <button class="menu-hamburguesa" aria-label="Abrir menu de navegación">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav class="menu-principal">
+                <ul>
+                    <li> <a href="#hero">Inicio</a></li>
+                    <li><a href="#problema">Problema</a></li>
+                    <li><a href="#zonas-criticas">Mapa</a></li> <li><a href="#beneficios">Iniciativas</a></li>
+                    <li><a href="#captaciones">Proyectos</a></li>
+                    <li id="nav-preguntas"><a href="preguntas.pdf" target="_blank" title="Abrir las preguntas">Preguntas</a></li> 
+            <li id="nav-lista"><a href="lista.pdf" target="_blank" title="Abrir lista">Lista</a></li> 
+            <li id="nav-guia"><a href="Guía.pdf" target="_blank" title="Abrir la guia ">Guia</a></li> 
+                    <li><a href="calculadora.html" class="boton-navegacion">Calculadora</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-contenido">
+                
+                <h1>Capta el agua, Gana la Vida.</h1> 
+                <p>
+                    Usa nuestra herramienta para estimar tu potencial de captación de agua de lluvia y contribuye a la sostenibilidad hídrica de tu comunidad.
+                </p>
+
+                <a href="calculadora.html" class="boton-primario">
+                    ¡QUIERO CALCULAR MI POTENCIAL!
+                </a>
+
+            </div>
+
+            <div class="imagen-animada hero-imagen">
+                <img src="hero_image.jpg" alt="Captación de agua de lluvia en techo" class="img-responsive" loading="lazy">
+            </div>
+
+            <div class="hero-estadisticas grid-movil"> 
+                
+                <div class="stat-item">
+                    <span class="stat-numero contador-destino" data-valor="1700000">0</span>
+                    <span class="stat-descripcion">Litros de capacidad anual del proyecto Colectivos de Lluvia en Zinacantepec.</span> </div>
+
+                <div class="stat-item">
+                    <span class="stat-numero contador-destino" data-valor="785">0</span>
+                    <span class="stat-descripcion">MM de precipitación anual (promedio de referencia de Zinacantepec, Inegi).</span> </div>
+
+                <div class="stat-item">
+                    <span class="stat-numero contador-destino" data-valor="53731">0</span>
+                    <span class="stat-descripcion">Hogares aproximados en Zinacantepec, según censo 2020.</span>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="problema" class="seccion-problema seccion-principal">
+            <section id="problema">
+        <h2>
+            El Problema de la Escasez
+            <span class="tooltip-trigger">
+                ?
+                <div class="tooltip-info tooltip-alerta">
+                    <div class="tooltip-header">
+                        <i class="icono-alerta" role="img" aria-label="Información"></i> 
+                        <div class="tooltip-titulo">¿Qué es Escasez Hídrica?</div>
+                    </div>
+                    <div class="tooltip-body">
+                        <p><strong></strong> Es la insuficiencia de recursos hídricos para satisfacer a la población.</p>
+                    </div>
+                </div>
+            </span>
+        </h2>
+        </div>
+</section>
+            
+            <h2>Escasez Crítica en Zinacantepec</h2>
+            
+            <p>
+                La escasez de agua es reportada como crítica y afecta directamente la vida diaria y las finanzas de los habitantes. Comunidades como San Cristóbal Tecolitl, San Matías Transfiguración, Barrio El Calvario, Barrio de San Miguel y La Loma sufren servicio intermitente. Esto se debe a la inoperancia de pozos por adeudos a la CFE y la falta de pipas operativas para la distribución.
+            </p>
+
+            <div class="imagen-animada problema-imagen">
+                <img src="problema_image.jpg" alt="Grifo goteando, escasez de agua" class="img-responsive" loading="lazy">
+            </div>
+
+            <div class="contenedor-datos-reales grid-movil"> 
+
+                <div class="dato-problema">
+                    <span class="dato-numero color-error">30+</span>
+                    <span class="dato-descripcion">Días de suspensión del servicio de agua por sector al año.</span>
+                </div>
+
+                <div class="dato-problema">
+                    <span class="dato-numero color-advertencia">40%</span>
+                    <span class="dato-descripcion">De agua se pierde en fugas de la infraestructura municipal.</span>
+                </div>
+
+                <div class="dato-problema">
+                    <span class="dato-numero color-error">85%</span>
+                    <span class="dato-descripcion">De la población depende exclusivamente del suministro municipal.</span>
+                </div>
+
+            </div>
+
+        </section>
+        
+        <section id="zonas-criticas" class="seccion-principal">
+            
+            <h2>Zonas Críticas de Escasez de Agua y Contexto Hídrico</h2>
+            <p>Identificamos las colonias de Zinacantepec con mayor reporte de escasez y los problemas específicos que enfrentan. Haz clic en un punto del mapa para ver el detalle. Además, consulta la leyenda y el contexto de precipitación.</p>
+
+           <div class="mapa-contenedor">
+    
+    <div class="mapa-visual imagen-animada">
+        
+        <img src="mapa_zinacantepec_placeholder.jpg" class="img-responsive">
+
+        <div class="dato-precipitacion">
+            <h3>💧 Contexto de Precipitación</h3>
+            <p><strong>Promedio Regional:</strong> 785.5 mm</p>
+            <p><em>Fuente: Estación Meteorológica de Toluca (INEGI).</em></p>
+        </div>
+
+        <div class="punto-interactivo punto-1" data-zona="tecolitl">
+            1
+            <div class="tooltip-info">
+                <div class="tooltip-titulo">1. San Cristóbal Tecolitl</div>
+                <div class="tooltip-problema">
+                    <span class="problema-tag">Problema principal:</span>
+                    Inoperancia de pozos por adeudos a la CFE y falta de pipas operativas.
+                </div>
+                <div class="tooltip-impacto">
+                    <span class="impacto-tag">Impacto:</span>
+                    Servicio de agua intermitente, afectando la vida diaria y la economía.
+                </div>
+                <span class="tooltip-cerrar">X</span>
+            </div>
+        </div>
+        
+        <div class="punto-interactivo punto-2" data-zona="transfiguracion">
+            2
+            <div class="tooltip-info">
+                <div class="tooltip-titulo">2. San Matías Transfiguración</div>
+                <div class="tooltip-problema">
+                    <span class="problema-tag">Problema principal:</span>
+                    Escasez por problemas en pozos de suministro y falta de equipos municipales.
+                </div>
+                <div class="tooltip-impacto">
+                    <span class="impacto-tag">Impacto:</span>
+                    Suspensión de servicio y necesidad de comprar agua a precios más altos.
+                </div>
+                <span class="tooltip-cerrar">X</span>
+            </div>
+        </div>
+        
+        <div class="punto-interactivo punto-3" data-zona="calvario">
+            3
+            <div class="tooltip-info">
+                <div class="tooltip-titulo">3. Barrio El Calvario</div>
+                <div class="tooltip-problema">
+                    <span class="problema-tag">Problema principal:</span>
+                    Inoperancia de los pozos de agua gestionados por OPDAPAS Zinacantepec.
+                </div>
+                <div class="tooltip-impacto">
+                    <span class="impacto-tag">Impacto:</span>
+                    Larga intermitencia en el servicio de agua, afectando la calidad de vida.
+                </div>
+                <span class="tooltip-cerrar">X</span>
+            </div>
+        </div>
+        
+        <div class="punto-interactivo punto-4" data-zona="san-miguel">
+            4
+            <div class="tooltip-info">
+                <div class="tooltip-titulo">4. Barrio de San Miguel</div>
+                <div class="tooltip-problema">
+                    <span class="problema-tag">Problema principal:</span>
+                    Problemas críticos con el suministro, atribuibles a pozos inoperantes.
+                </div>
+                <div class="tooltip-impacto">
+                    <span class="impacto-tag">Impacto:</span>
+                    Dependencia de la escasa distribución por pipas, cuando están disponibles.
+                </div>
+                <span class="tooltip-cerrar">X</span>
+            </div>
+        </div>
+        
+        <div class="punto-interactivo punto-5" data-zona="la-loma">
+            5
+            <div class="tooltip-info">
+                <div class="tooltip-titulo">5. La Loma</div>
+                <div class="tooltip-problema">
+                    <span class="problema-tag">Problema principal:</span>
+                    Problemas de infraestructura y sobrecarga por construcción de fraccionamiento.
+                </div>
+                <div class="tooltip-impacto">
+                    <span class="impacto-tag">Impacto:</span>
+                    Reducción de la disponibilidad de agua por desarrollo habitacional.
+                </div>
+                <span class="tooltip-cerrar">X</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="mapa-sidebar">
+        
+        <div class="mapa-detalle">
+            
+            <div id="detalle-instruccion" class="detalle-zona active">
+                <h3>¡Explora las Zonas Críticas!</h3>
+                <p>Haz clic en los **puntos numerados** del mapa (1 al 5) para ver el detalle completo del problema, el impacto y las causas de la escasez de agua en cada zona.</p>
+            </div>
+            
+            <div id="detalle-tecolitl" class="detalle-zona">
+                <h3>1. San Cristóbal Tecolitl</h3>
+                <p><strong>Problema principal:</strong> La escasez se debe a la inoperancia de pozos por adeudos a la CFE y a la falta de pipas operativas para la distribución en la zona.</p>
+                <p><strong>Impacto:</strong> Servicio de agua intermitente, afectando la vida diaria y la economía de los hogares.</p>
+            </div>
+            <div id="detalle-transfiguracion" class="detalle-zona">
+                <h3>2. San Matías Transfiguración</h3>
+                <p><strong>Problema principal:</strong> Escasez reportada debido a problemas en los pozos de suministro y la falta de equipos de servicio municipal.</p>
+                <p><strong>Impacto:</strong> Suspensión de servicio y necesidad de comprar agua a precios más altos.</p>
+            </div>
+            <div id="detalle-calvario" class="detalle-zona">
+                <h3>3. Barrio El Calvario</h3>
+                <p><strong>Problema principal:</strong> Esta comunidad sufre las consecuencias de la inoperancia de los pozos de agua gestionados por OPDAPAS Zinacantepec.</p>
+                <p><strong>Impacto:</strong> Larga intermitencia en el servicio de agua, afectando la calidad de vida.</p>
+            </div>
+            <div id="detalle-san-miguel" class="detalle-zona">
+                <h3>4. Barrio de San Miguel</h3>
+                <p><strong>Problema principal:</strong> Similar a otras zonas, enfrenta problemas críticos con el suministro, atribuibles a los pozos inoperantes.</p>
+                <p><strong>Impacto:</strong> La población depende de la escasa distribución por pipas, cuando están disponibles.</p>
+            </div>
+            <div id="detalle-la-loma" class="detalle-zona">
+                <h3>5. La Loma</h3>
+                <p><strong>Problema principal:</strong> Además de los problemas generales de infraestructura, los vecinos atribuyen la escasez en su colonia a la construcción de un nuevo fraccionamiento que sobrecarga el sistema.</p>
+                <p><strong>Impacto:</strong> Problema agravado por nuevo desarrollo habitacional, reduciendo la disponibilidad de agua.</p>
+            </div>
+        </div>
+        
+        <div class="mapa-leyenda">
+            <h3>Leyenda e Iconografía</h3>
+            <div class="leyenda-item">
+                <span class="leyenda-icono icono-critico">1-5</span>
+                <p>Zona Crítica (Punto Interactivo)</p>
+            </div>
+            <div class="leyenda-item">
+                <span class="leyenda-icono icono-precipitacion">💧</span>
+                <p>Contexto de Precipitación (mm)</p>
+            </div>
+            <div class="leyenda-item">
+                <span class="leyenda-icono icono-infraestructura">🚱</span>
+                <p>Problemas de Infraestructura / Suministro</p>
+            </div>
+        </div>
+    </div>
+</div>
+        <section id="beneficios" class="seccion-principal">
+            <button class="boton-modal" data-target="modalProblemaEscasez">Ver más sobre el Problema</button>
+            <br> <br> <br><br>
+    <div class="contenedor">
+            <h2>Iniciativas y Soluciones Locales</h2>
+            
+            <div class="contenedor-tarjetas">
+                
+                <div class="tarjeta-beneficio imagen-animada">
+                    <h3>Abasto Comunitario (Colectivos de Lluvia)</h3>
+                    <p>
+                        El sistema de captación y purificación de la Casa de Cultura "Matilde Zúñiga" beneficia a las más de 400 personas que asisten diariamente al recinto.
+                    </p>
+                    <img src="beneficio_costos.jpg" alt="Ahorro de dinero en facturas de agua" class="img-responsive tarjeta-imagen" loading="lazy">
+                </div>
+
+                <div class="tarjeta-beneficio imagen-animada">
+                    <h3>Proyección Municipal</h3>
+                    <p>
+                        El Ayuntamiento planea replicar el modelo del proyecto "Colectivos de Lluvia" en otras comunidades y escuelas del municipio para enfrentar la escasez.
+                    </p>
+                    <img src="beneficio_sostenibilidad.jpg" alt="Naturaleza, agua limpia, medio ambiente" class="img-responsive tarjeta-imagen" loading="lazy">
+                </div>
+
+                <div class="tarjeta-beneficio imagen-animada">
+                    <h3>Captación Artesanal</h3>
+                    <p>
+                        Antes de los proyectos institucionales, muchas comunidades ya practicaban la captación de forma artesanal, usando métodos rudimentarios como cubetas o tinacos.
+                    </p>
+                    <img src="beneficio_ambiente.jpg" alt="Protección contra inundaciones, naturaleza sana" class="img-responsive tarjeta-imagen" loading="lazy">
+                </div>
+                
+            </div>
+        </section>
+            
+        <section id="captaciones" class="seccion-principal">
+            <h2>Proyectos Existentes y Colaboraciones</h2>
+            <p>
+                El proyecto más destacado es "Colectivos de Lluvia", una iniciativa público-privada que comenzó en Octubre de 2025. La instalación en Zinacantepec se logró gracias a una donación de la iniciativa privada.
+            </p>
+
+            <div class="proceso-captacion">
+                
+                <div class="paso-item imagen-animada">
+                    <h3>Autoridades Locales</h3>
+                    <p>El organismo local encargado es OPDAPAS Zinacantepec, cuyo Director General es el Lic. Iván Saucedo Sánchez. El Ayuntamiento, con el Presidente Municipal Lic. Manuel Vilchis Viveros, apoya y coordina. </p>
+                    <img src="paso1_captura.jpg" alt="Techo con canaletas recolectoras" class="img-responsive paso-imagen" loading="lazy">
+                </div>
+
+                <div class="paso-item imagen-animada">
+                    <h3>Reportes de Agua</h3>
+                    <p>El teléfono para reportes de OPDAPAS es 722 218 3290 ext. 109. El problema de escasez es crítico y se debe a la inoperancia de pozos. Las colonias afectadas incluyen San Cristóbal Tecolitl y La Loma.</p>
+                    <img src="paso2_filtrado.jpg" alt="Sistema de filtrado de agua de lluvia" class="img-responsive paso-imagen" loading="lazy">
+                </div>
+                
+                <div class="paso-item imagen-animada">
+                    <h3>Autoridades Federales/Estatales</h3>
+                    <p>Colaboran CONAGUA y CAEM. CAEM participa en proyectos de infraestructura hídrica, como el programa Colectivos de Lluvia.</p>
+                    <img src="paso3_almacenamiento.jpg" alt="Cisterna o tinaco almacenando agua" class="img-responsive paso-imagen" loading="lazy">
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+    <footer id="contacto" class="footer-principal">
+        <div class="footer-contenedor">
+            
+            <div class="footer-info">
+                <h3>Zinacantepec Sostenible</h3>
+                <p class="contacto-email">Email: captaciondeagua2025@gmail.com</p>
+                <p class="contacto-telefono">Teléfono: 722-123-4567</p>
+                <p class="contacto-telefono">Teléfono: 722-456-0923</p>
+
+                <form id="form-suscripcion" class="form-suscripcion">
+                    <h4>¿Te gustaria contactarnos? Suscribete</h4>
+                    
+                    <label for="nombre" class="sr-only">Nombre</label>
+                    <input 
+                        type="text" 
+                        id="nombre" 
+                        name="nombre" 
+                        placeholder="Tu Nombre (Obligatorio)" 
+                        required 
+                    >
+
+                    <label for="email" class="sr-only">Correo Electrónico</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Introduce tu correo (Obligatorio)" 
+                        required 
+                        aria-describedby="email-error"
+                    >
+                    <span id="email-error" class="mensaje-error" aria-live="polite"></span> 
+
+                    <label for="telefono" class="sr-only">Número Telefónico</label>
+                    <input 
+                        type="tel" 
+                        id="telefono" 
+                        name="telefono" 
+                        placeholder="Tu Número Telefónico (Opcional)"
+                    >
+                    <span id="telefono-error" class="mensaje-error" aria-live="polite"></span> 
+                    
+                    <label for="mensaje" class="sr-only">Mensaje</label>
+                    <textarea 
+                        id="mensaje" 
+                        name="mensaje" 
+                        placeholder="Déjanos un mensaje (Opcional)" 
+                        rows="3"
+                    ></textarea>
+                    
+                    <button type="submit" class="boton-primario">SUSCRIBIRME</button>
+                </form>
+                </div>
+
+            <nav class="footer-navegacion">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html#hero">Inicio</a></li>
+            <li><a href="index.html#problema">Problema</a></li>
+            <li><a href="index.html#zonas-criticas">Mapa</a></li> 
+            <li><a href="index.html#beneficios">Iniciativas</a></li>
+            <li><a href="index.html#captaciones">Proyectos</a></li> 
+            <li><a href="calculadora.html" class="boton-navegacion active">Calculadora</a></li>
+            <li id="nav-preguntas"><a href="preguntas.pdf" target="_blank" title="Abrir las preguntas">Preguntas</a></li> 
+            <li id="nav-lista"><a href="lista.pdf" target="_blank" title="Abrir lista">Lista</a></li> 
+            <li id="nav-guia"><a href="Guía.pdf" target="_blank" title="Abrir la guia ">Guia</a></li> 
+                </ul>
+            </nav>
+            
+            <div class="footer-social footer-navegacion"> 
+                <h4>Síguenos</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/share/17gnbbwrdd/" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/share/1bpag4prov/" target="_blank">Facebook</a></li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <div class="footer-copyright">
+            <p>© 2025 Proyecto de Captacionde agua pluvial. Ariana Teodoro y Erika Gavia</p>
+        </div>
+    </footer>
+    <script src="menu.js"></script> 
+    <script src="validacion.js"></script> 
+    <script src="contador.js"></script> 
+    <script src="animacion-imagenes.js"></script>
+    <script src="mapa.js"></script> 
+    <script src="tooltips.js"></script>
+</body>
+<div id="modalProblemaEscasez" class="modal-overlay">
+    <div class="modal-contenido">
+        
+        <span class="modal-cerrar">&times;</span>
+        
+        <h3 class="modal-titulo">Profundizando en la Escasez Hídrica</h3>
+        
+        <div class="modal-body">
+            <p>La escasez en Zinacantepec no solo se debe a la baja precipitación, sino a una combinación de factores que incluyen el crecimiento urbano descontrolado, la sobreexplotación de mantos acuíferos para uso industrial y agrícola, y la infraestructura obsoleta que provoca grandes fugas en el sistema de distribución.</p>
+            <p>Es crucial entender que la falta de agua afecta la salud pública, la economía local y la estabilidad social de las comunidades más vulnerables...</p>
+            </div>
+        
+    </div>
+</div>
+</html>
